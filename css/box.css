@@ -1,0 +1,41 @@
+.header__box {
+  width: 200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.header__box img {
+  max-width: 100%;
+  margin: 0 auto;
+}
+.section-box {
+  width: 500px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  border: 1px solid black;
+}
+.common-form {
+  margin: 5px 0;
+}
+.section-box > h1 {
+  font-size: 2rem;
+}
+.common-form__list input {
+  width: 100%;
+  font-size: 1.5rem;
+  margin: 5px 0;
+  border: none;
+  background-color: lightgray;
+  padding: 10px;
+}
+.common-form__submit {
+  width: 100%;
+  font-size: 1rem;
+  padding: 10px;
+  border: none;
+  background-color: lightblue;
+  color: black;
+}
+.common-form__submit:hover {
+  cursor: pointer;
+}

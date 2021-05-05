@@ -1,0 +1,12 @@
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.common-button {
+  width: 48%;
+  border: none;
+  text-align: center;
+  padding: 5px;
+  background-color: lightblue;
+  color: black;
+}
