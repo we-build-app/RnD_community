@@ -8,13 +8,22 @@
     <link rel="stylesheet" href="css/col12.css" />
     <link rel="stylesheet" href="css/box.css" />
     <link rel="stylesheet" href="css/basic.css" />
+    <link rel="stylesheet" href="css/common.css" />
   </head>
   <body>
-    <header>
-      <div class="header__box">
-        <img src="media/build_logo.png" alt="" />
-      </div>
-    </header>
+    <div id="top">
+      <header class="header">
+        <h1 class="heading">로그인</h1>
+      </header>
+      <nav class="navbar">
+        <ul class="nav_ul">
+          <li class="nav_li"><a href="#">글보기</a></li>
+          <li class="nav_li"><a href="#">프로필</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="logo__box"></div>
 
     <section class="section-box">
       <h1>로그인</h1>
@@ -40,7 +49,7 @@
             />
           </li>
         </ul>
-        <input type="submit" class="common-form__submit" value="로그인" />
+        <button type="submit" class="common-form__submit">로그인</button>
       </form>
 
       <div class="flex">

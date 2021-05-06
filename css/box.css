@@ -1,9 +1,10 @@
-.header__box {
+.logo__box {
   width: 200px;
+  height: 15vh;
   max-width: 100%;
   margin: 0 auto;
 }
-.header__box img {
+.logo__box img {
   max-width: 100%;
   margin: 0 auto;
 }
@@ -12,7 +13,7 @@
   max-width: 100%;
   margin: 0 auto;
   padding: 2rem;
-  border: 1px solid black;
+  border-radius: 1em;
 }
 .common-form {
   margin: 5px 0;
@@ -31,10 +32,11 @@
 .common-form__submit {
   width: 100%;
   font-size: 1rem;
-  padding: 10px;
+  padding: 1em;
   border: none;
-  background-color: lightblue;
+  background-color: #d9e1c8;
   color: black;
+  margin: 5px 0;
 }
 .common-form__submit:hover {
   cursor: pointer;
