@@ -1,3 +1,6 @@
+body{
+    margin: 0%;
+}
 #top{
     height: 10%;
     background-color: #D9E1C8;
@@ -6,7 +9,7 @@
 header.header{
     flex-wrap: wrap;
     flex-grow: 6;
-    line-height: 5em ;
+    line-height: 4em ;
     text-align: left ;
 }
 h1.heading{
@@ -15,7 +18,7 @@ h1.heading{
 }
 nav.navbar{
     flex-grow: 1;
-    line-height: 5em;
+    line-height: 4em;
 }
 ul.nav_ul{
     display: flex;
@@ -28,7 +31,7 @@ ul.nav_ul{
     border: round;
     list-style: none;
     padding: 0% 0% 0% 20%;
-    margin: 1.8em .5em 1.8em 0em;
+    margin: 1em .5em 1em 0em;
     line-height: 5em;
 }
 li.nav_li{
@@ -52,5 +55,5 @@ li.nav_li a{
 #content{
     height: 80vh;
     width:100vw;
-
+    padding-top: 3%;
 }
