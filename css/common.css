@@ -44,6 +44,17 @@ li.nav_li{
     line-height: 4em;
 }
 
+li.nav_li:hover{
+    background-color: rgb(157, 223, 166);
+    Flex: 0 1 4em;
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 4em;
+    border: 1px solid rgb(43, 128, 43); 
+}
+
 li.nav_li a{
     text-decoration: none;
     text-align: center;
