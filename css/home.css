@@ -1,0 +1,86 @@
+/*writing*/
+div#content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+div.reading{
+    margin: 2%;
+    float: left;
+
+    width: 75vh;
+    height: 75vh;
+    margin: 0 5%; 
+    float: left;
+}
+
+#writer_name{
+    width: 100%;
+    height: 8%;
+    text-align: left;
+    font-style: oblique;
+}
+p.maintitle_heading{
+    width: 100%;
+    height:8%;
+
+    font-size: 200%;
+    font-weight: bold;
+}
+p.subtitle_heading{
+    width:100%;
+    height: 5%;
+    font-size: 150%;
+}
+
+
+div.main_contents{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+p.main_paragraph{
+    width:100%;
+    height: 75%;
+    
+    font-size: 100%;
+}
+
+ul.reply{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    grid-template-rows: repeat(5,0.8fr);
+}
+
+li.reply_each{
+    width: 100%;
+    height: 20%;
+    display: grid;
+}
+div.reply_info{
+    display: flex;
+    align-items: center;
+    
+    line-height: 10%;
+    
+}
+img.reply_profile{
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+}
+
+p.user_name{
+    display: inline;
+    margin: 5% 5% 5% 5%;
+    
+    font-size: 1em;
+    font-weight: bolder;
+
+}
+p.reply_contents{
+    margin: 2% 2% 5% 2%
+}
+
+

@@ -1,0 +1,35 @@
+body {
+  background-color: #d9e1c8;
+  text-align: center;
+}
+.logo {
+  position: absolute;
+  top: 18vh;
+  left: 40vw;
+  width: 20vw;
+  height: 20vw;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: white;
+  animation-name: roll;
+  animation-duration: 2.1s;
+}
+.welcome-text {
+  position: absolute;
+  left: 40vw;
+  top: calc(20vh + 20vw);
+}
+.logo img {
+  width: 100%;
+  margin: 0 auto;
+}
+@keyframes roll {
+  from {
+    left: 0vw;
+    transform: rotate(180deg);
+  }
+  to {
+    left: 40vw;
+    transform: rotate(360deg);
+  }
+}

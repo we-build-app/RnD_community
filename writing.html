@@ -2,44 +2,48 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/fcee8068f7.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/writing_style.css">
-    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="css/writing_style.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/picture.css" />
     <title>writing</title>
 </head>
 
 <body>
     <div id="top">
         <header class="header">
-            <h1 class="heading">writing...</h1>
+            <h1 class="heading">글쓰기</h1>
         </header>
         <nav class="navbar">
             <ul class="nav_ul">
-                <li class="nav_li"><a href="#">글보기</a></li>
+                <li class="nav_li"><a href="/home.html">글보기</a></li>
                 <li class="nav_li"><a href="#">프로필</a></li>
             </ul>
         </nav>
     </div>
     <div id="content">
-        <form action="" method="post" enctype="multipart/form-data" class="writing_form" name="writing_post">
+        <form action="" method="post" enctype="multipart/form-data" class="writing_form">
             <div class="picture">
                 <label for="upload_file">
-                    <img src="/media/addPictureIcon.png" class="pic">
+                    <img src="media/addPictureIcon.png" id="preview" class="pic" />
                 </label>
-                <input type="file" id="upload_file"></input>
+                <input type="file" id="upload_file" />
             </div>
             <div class="writing">
                 <div class="write_top">
-                    <input type="text" class="maintitle_heading" autofocus placeholder="오늘의 한마디!">
+                    <input type="text" class="maintitle_heading" autofocus placeholder="오늘의 한마디!" />
                 </div>
-                <input type="text" class="subtitle_heading" placeholder="한마디로는 어땠어요?"> <br>
-                <textarea class="main_paragraph" rows="30" placeholder="오늘의 이야기를 알려주세요."></textarea><br>
-                <input type="button" class="submit_btn" value="저장">
+                <input type="text" class="subtitle_heading" placeholder="한마디로는 어땠어요?" />
+                <br />
+                <textarea class="main_paragraph" rows="30" placeholder="오늘의 이야기를 알려주세요."></textarea><br />
+                <input type="button" class="submit_btn" value="저장" />
+            </div>
         </form>
     </div>
+    <script src="js/writing.js"></script>
 </body>
 
 </html>
