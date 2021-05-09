@@ -35,15 +35,19 @@
               name="email"
               required
               placeholder="이메일"
+              onfocus="this.placeholder=''"
+              onblur="this.placeholder='이메일'"
             />
           </li>
           <li>
             <input
               type="password"
               id="password"
-              name="password"
+              name="password" 
               required
               placeholder="비밀번호"
+              onfocus="this.placeholder=''"
+              onblur="this.placeholder='비밀번호'"
             />
           </li>
         </ul>

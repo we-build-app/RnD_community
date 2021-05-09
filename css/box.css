@@ -40,6 +40,7 @@
 }
 .common-form__submit:hover {
   cursor: pointer;
+  background-color: rgb(161, 201, 161);
 }
 .flex {
   display: flex;
