@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/box.css" />
     <link rel="stylesheet" href="css/common.css" />
   </head>
-  <body>
+  <body onload="login_init()">
     <div id="top">
       <header class="header">
         <h1 class="heading">로그인</h1>
@@ -35,19 +35,15 @@
               name="email"
               required
               placeholder="이메일"
-              onfocus="this.placeholder=''"
-              onblur="this.placeholder='이메일'"
             />
           </li>
           <li>
             <input
               type="password"
               id="password"
-              name="password" 
+              name="password"
               required
               placeholder="비밀번호"
-              onfocus="this.placeholder=''"
-              onblur="this.placeholder='비밀번호'"
             />
           </li>
         </ul>
@@ -59,5 +55,6 @@
         <a class="common-button" href="address_search.html"> 계정찾기 </a>
       </div>
     </section>
+    <script src="js/registration.js"></script>
   </body>
 </html>

@@ -5,15 +5,24 @@ function registration_init() {
   pswd1 = document.getElementById("password");
   pswd2 = document.getElementById("password-check");
   validText = document.getElementById("validText");
+  setPlaceholder();
+}
+function login_init(){
+  setPlaceholder();
+}
+function setPlaceholder(){
+  const inputs = document.getElementsByTagName("input");
+  for(let i = 0; i < inputs.length; i++){
+    let str = inputs[i].placeholder;
+    inputs[i].onfocus = (e) => (e.target.placeholder = '');
+    inputs[i].onblur = (e) => (e.target.placeholder = str);
+  }
 }
 function pswdCheck() {
-  if (pswd1.value != pswd2.value) {
-    return false;
-  }
-  return true;
+  return pswd1.value === pswd2.value;
 }
 function keyCheck() {
-  var str;
+  let str;
   if (pswdCheck()) {
     str = "비밀번호가 일치합니다.";
     validText.style.color = "green";

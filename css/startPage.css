@@ -16,7 +16,8 @@ body {
 }
 .welcome-text {
   position: absolute;
-  left: 40vw;
+  width: 340px;
+  left: calc(50vw - 170px);
   top: calc(20vh + 20vw);
 }
 .logo img {
