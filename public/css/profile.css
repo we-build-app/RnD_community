@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .container_center{
+    display: flex;
+    justify-content: center;
+  }
+  .profile{
+    margin: 3rem;
+  }
+  table{
+    margin: 1rem;
+  }
+  #first{
+    border-collapse: collapse;
+  }
+  #first td{
+    text-align: center;
+  }
+  #first td:nth-child(1){
+    border-right: 1px solid gray;
+  }
+
+  #Info{
+    border-collapse: collapse;
+    border-top: 1px solid gray;
+  }
+  #Info td:nth-child(1){
+    border-right: 1px solid gray;
+  }
+  #Info td{
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 1px solid gray;
+  }
+
+  #num{
+    border-collapse: collapse;
+  }
+  #num tr:nth-child(1){
+    border-bottom: 1px solid gray;
+  }
+  #num th,td{
+    text-align: center;
+    padding: 1rem;
+  }

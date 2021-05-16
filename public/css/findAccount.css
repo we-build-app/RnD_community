@@ -1,0 +1,14 @@
+p{
+    padding: 1rem;
+  
+}
+button{
+    float: right;
+    width: 20%;
+    font-size: 1rem;
+    padding: 1em;
+    border: none;
+    background-color: #d9e1c8;
+    color: black;
+    margin: 5px 0;
+}
