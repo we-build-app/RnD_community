@@ -1,14 +1,9 @@
 var mysql = require('mysql');
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
+const dbconfig = require('../config/database.js');
+const connection = mysql.createConnection(dbconfig);
 
-var connection = mysql.createConnection({
-  host     : "54.180.193.230",
-  user     : "root",
-  password : "12345678",
-  database : "userDB",
-  port: "3306"
-}); 
 connection.connect(function(err) {
   if (err) {
     console.error('error connecting: ' + err.stack);
@@ -25,36 +20,49 @@ connection.connect(function(err) {
 
 exports.register = function (req, res) {                                                                                                                                                   
     // console.log("req", req.body);
-    var today = new Date();
-    var users = {
-        "first_name": req.body.first_name,
-        "last_name": req.body.last_name,
-        "email": req.body.email,
-        "password": req.body.password,
-        "created": today,
-        "modified": today
-    }
-    connection.query('INSERT INTO users SET ?' , users, function (error, results, fields) {
+    let today = new Date();
+    let userName = {
+        "User_name": req.body.email.split("@")[0],
+        "joined": today,
+    };
+
+    connection.query('INSERT INTO User SET ?', userName, function (error, results, fields) {
         if (error) {
             console.log("error ocurred", error);
             res.send({
                 "code" : 400,
                 "failed": "error ocurred"
-            })
+            });
         } else {
-            console.log('The solution is: ', results);
-            res.send({
-                "code": 200,
-                "success": "user registered sucessfully"
+            let users = {
+                "User_id": results.insertId,  // LAST_INSERT_ID()
+                "email": req.body.email,
+                "pw": req.body.password,
+            }
+
+            connection.query('INSERT INTO User_login SET ?', users, function (error, results, fields) {
+                if (error) {
+                    console.log("error ocurred", error);
+                    res.send({
+                        "code" : 400,
+                        "failed": "error ocurred"
+                    })
+                } else {
+                    console.log('The solution is: ', results);
+                    res.send({
+                        "code": 200,
+                        "success": "user registered successfully"
+                    });
+                }
             });
         }
-    });    
+    });
 }
 
 exports.login = function (req, res) {
     var email = req.body.email;
     var password = req.body.password;
-    connection.query('SELECT * FROM users WHERE email = ?', [email],
+    connection.query('SELECT * FROM User_login WHERE Email = ?', [email],
     function( error, results, fields) {
         if (error) {
             // console.log("error ocurred", error);
@@ -65,10 +73,10 @@ exports.login = function (req, res) {
         } else {
             // console.log('The solution is: ', results);
             if(results.length > 0) {
-                if(results[0].password == password) {
+                if(results[0].pw == password) {
                     res.send({
                         "code": 200,
-                        "success": "login sucessfull"
+                        "success": "login successfull"
                     });
                 } else {
                     res.send({
