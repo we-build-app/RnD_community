@@ -66,13 +66,16 @@
               })
           }).then((res) => res.json()).then((data) => {
               console.log(data);
-              alert(JSON.stringify(data));
+              
+              if (data.code == 200) {
+                window.location.href = '/profile.html';
+              }
           });
         }
       </script>
       <div class="flex">
         <a class="common-button" href="registration.html"> 회원가입 </a>
-        <a class="common-button" href="address_search.html"> 계정찾기 </a>
+        <a class="common-button" href="findAccount.html"> 계정찾기 </a>
       </div>
     </section>
     <script src="js/registration.js"></script>

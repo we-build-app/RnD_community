@@ -93,3 +93,20 @@ exports.login = function (req, res) {
         }    
     }) 
 }
+
+exports.getProfile = function(req, resp) {
+    connection.query('SELECT User_name, Profile_message, Profile_pic_url, nickname FROM User WHERE User_id = ?', 2, 
+        function(error, results, fields) {
+            if (error) {
+                ;
+            }
+            console.log(results[0]);
+            let res = results[0];
+            resp.render('profile', {
+                'userName': res.User_name, 
+                'profileUrl': res.Profile_pic_url, 
+                'profileMsg': res.Profile_message,
+                'nickname': res.nickname,
+            });
+        });
+};
